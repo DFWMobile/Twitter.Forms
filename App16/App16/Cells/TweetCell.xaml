@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:tranformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="App16.Cells.TweetCell">
+  <ContentView.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ffimage:CachedImage Grid.Row="0"
+                                                 Grid.Column="0"
+                                                 WidthRequest="300"
+                                                 HeightRequest="300"
+                                                 Source="{Binding Picture.Thumbnail}">
+                <ffimage:CachedImage.Transformations>
+                    <tranformations:CircleTransformation />
+                </ffimage:CachedImage.Transformations>
+            </ffimage:CachedImage>
+
+            <StackLayout Orientation="Vertical"
+                                         HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"
+                                         Grid.Column="1">
+                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                    <Label Text="{Binding Name.First}" FontAttributes="Bold" />
+                    <Label Text="{Binding Name.Last}" FontAttributes="Bold"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+
+                </StackLayout>
+                <Label>Hello World, this is my tweet.</Label>
+            </StackLayout>
+
+            <Grid Grid.Column="1"
+                                  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="&#xf075;"
+                                        Style="{StaticResource IconButton}"/>
+
+
+                <Button Text="&#xf079;" 
+                                        Grid.Column="1" 
+                                        Style="{StaticResource IconButton}"/>
+            </Grid>
+
+
+
+
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

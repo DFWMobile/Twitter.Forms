@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cells="clr-namespace:App16.Cells"
+             x:Class="App16.Views.FeedView">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Users}" RowHeight="130">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <cells:TweetCell />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
