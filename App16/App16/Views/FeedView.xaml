@@ -5,6 +5,9 @@
              x:Class="App16.Views.FeedView">
     <ContentPage.Content>
         <ListView ItemsSource="{Binding Users}" RowHeight="130">
+            <x:Arguments>
+                <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+            </x:Arguments>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
