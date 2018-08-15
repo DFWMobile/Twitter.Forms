@@ -60,6 +60,17 @@
                 <Button Text="&#xf079;" 
                                         Grid.Column="1" 
                                         Style="{StaticResource IconButton}"/>
+
+
+
+                <Button Text="&#xf004;" 
+                                        Grid.Column="2" 
+                                        Style="{StaticResource IconButton}"/>
+
+
+                <Button Text="&#xf1e0;" 
+                                        Grid.Column="3" 
+                                        Style="{StaticResource IconButton}"/>
             </Grid>
 
 
